@@ -1,5 +1,4 @@
 from __future__ import annotations
-
 import logging
 import os
 from datetime import date
@@ -105,7 +104,6 @@ def main() -> None:
     token = os.environ.get("BOT_TOKEN") or os.environ.get("VKTEAMS_BOT_TOKEN")
     if not token:
         raise RuntimeError("Set BOT_TOKEN or VKTEAMS_BOT_TOKEN before starting the bot.")
-
     bot = build_bot(token=token)
     LOGGER.info("VK Teams bot started with mailru-im-bot and SQLite storage")
     if os.environ.get("LOG_HELP_ON_START", "0") == "1":
