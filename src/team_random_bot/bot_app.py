@@ -58,7 +58,7 @@ def _message_context(data: dict[str, Any]) -> MessageContext | None:
         return None
     return MessageContext(
         chat_id=str(chat_id),
-        user_id=str(user_id),
+        user_id=str(user_id).lstrip("@"),
         user_name=str(_user_name(data)),
         today=date.today(),
     )
