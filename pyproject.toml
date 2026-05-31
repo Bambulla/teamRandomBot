@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "team-random-bot"
+version = "0.1.0"
+description = "VK Teams bot for random team splitting and creative facilitation."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "vk-teams-async-bot>=1.1.0,<2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+
+[project.scripts]
+team-random-bot = "team_random_bot.bot_app:run"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/team_random_bot"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
