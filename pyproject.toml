@@ -9,7 +9,7 @@ description = "VK Teams bot for random team splitting and creative facilitation.
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-  "vk-teams-async-bot>=1.1.0,<2.0.0",
+  "mailru-im-bot>=0.0.21,<0.1.0",
 ]
 
 [project.optional-dependencies]
